@@ -5,10 +5,8 @@
     top: 0;
     width: 100%;
     display: flex;
-    padding: 0.75rem;
-    font-size: 1.05rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .header span {
@@ -17,12 +15,9 @@
     font-weight: 500;
 }
 
-.header nav {
-    margin-right: 1rem;
-}
-
 .header a {
     text-decoration: none;
     color: white;
     padding-inline: 0.5rem;
+    font-size: 1.125rem;
 }
