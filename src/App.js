@@ -3,19 +3,18 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Container from "./components/Container";
 import Card from "./components/Card";
-import videos from "./json/db.json";
-
+import Category, { categories, filterCategory } from "./components/Category";
 
 function App() {
   return (
     <div>
       <Header />
       <Banner image="home" />
-      <Container>
-        <h2>Ciência</h2>
-        <section className="cards">
-          { videos.map((video) => <Card id={video.id} key={video.id} /> )}    
-          </section>
+      <Container>      
+          { categories.map((category, index) => <Category category={category}>
+            { filterCategory(index).map((video) => <Card id={video.id} key={video.id} /> )}
+          </Category>)
+          }
         </Container>
       <Footer />
     </div>
